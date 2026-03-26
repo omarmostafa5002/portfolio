@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 * {
     margin: 0;
@@ -94,40 +94,6 @@ nav a.active {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Mobile Sidebar */
-@media (max-width: 768px) {
-
-    .hamburger {
-        display: flex;
-    }
-
-    nav {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 260px;
-        height: 100vh;
-        background-color: #111;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 3rem;
-        transition: right 0.4s ease;
-        z-index: 1050;
-        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
-    }
-
-    nav.open {
-        right: 0;
-    }
-
-    nav a {
-        font-size: 2rem;
-        margin-left: 0;
-    }
-}
-
 section {
     min-height: 100vh;
     padding: 5rem 9% 5rem;
@@ -171,15 +137,12 @@ span {
     position: relative;
     width: 32vw;
     border-radius: 50%;
-    box-shadow: 0 0 25px solid #b74b4b;
     cursor: pointer;
     transition: 0.2s linear;
 }
 
 .home-img img:hover {
     transform: scale(1.05);
-    font-size: 1.8rem;
-    font-weight: 500;
 }
 
 .home-icons a {
@@ -258,36 +221,11 @@ span {
 }
 
 @keyframes words {
-
-    0%,
-    50% {
+    0%, 50% {
         content: "ASP.NET Developer";
     }
-
-    55%,
-    100% {
+    55%, 100% {
         content: "Mobile Developer";
-    }
-
-}
-
-@media(max-width: 995px) {
-    .home {
-        flex-direction: column;
-        margin: 5rem 4rem;
-    }
-
-    .home .home-content h3 {
-        font-size: 2.5rem;
-    }
-
-    .home-content h1 {
-        font-size: 5rem;
-    }
-
-    .home-img img {
-        width: 70vh;
-        margin-top: 4rem;
     }
 }
 
@@ -300,12 +238,6 @@ span {
 /* Education */
 .education {
     background: black;
-}
-
-.heading {
-    font-size: 5rem;
-    text-align: center;
-    margin-bottom: 5rem;
 }
 
 .edu-container {
@@ -350,12 +282,7 @@ span {
     box-shadow: 0 0 25px #b74b4b;
 }
 
-@media(max-width: 768px) {
-    .edu-box {
-        width: 100%;
-    }
-}
-
+/* Skills */
 .skills-container {
     display: flex;
     justify-content: center;
@@ -377,6 +304,7 @@ span {
     transform: scale(1.1);
 }
 
+/* Projects */
 .project-container {
     display: flex;
     gap: 3rem;
@@ -429,15 +357,6 @@ span {
     width: 20rem;
 }
 
-/* Responsive */
-@media(max-width: 995px) {
-
-    .contact input,
-    .contact textarea {
-        width: 90%;
-    }
-}
-
 /* Certificate Section */
 .certificate {
     padding: 3rem;
@@ -487,9 +406,62 @@ span {
     filter: brightness(1.08);
 }
 
+/* ===========================
+   RESPONSIVE - Tablet & Mobile
+   =========================== */
 @media (max-width: 995px) {
+
+    /* Header */
+    header {
+        padding: 1rem 4%;
+        margin-top: 0;
+    }
+
+    .logo {
+        font-size: 2.2rem;
+    }
+
+    /* Show Hamburger */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Sidebar Nav */
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 260px;
+        height: 100vh;
+        background-color: #111;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        transition: right 0.4s ease;
+        z-index: 1050;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+    }
+
+    nav.open {
+        right: 0;
+    }
+
+    nav a {
+        font-size: 2rem;
+        margin-left: 0;
+    }
+
+    /* Font size */
     html {
         font-size: 55%;
+    }
+
+    /* Home */
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
     }
 
     .home-content h1 {
@@ -500,28 +472,42 @@ span {
         font-size: 2.5rem;
     }
 
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    /* Headings */
     .heading {
         font-size: 3.5rem;
     }
 
+    /* Projects */
+    .project-box {
+        width: 100%;
+    }
+
+    /* Typing */
+    .typing-text {
+        font-size: 2.5rem;
+    }
+
+    /* Contact */
+    .contact input,
+    .contact textarea {
+        width: 90%;
+    }
+
+    /* Certificate */
     .certificate h2 {
         font-size: 3rem;
         margin-bottom: 3rem;
     }
 
     .cert-container {
-        grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
         padding: 0 1rem;
         max-width: 100%;
-    }
-
-    .project-box {
-        width: 100%;
-    }
-
-    .typing-text {
-        font-size: 2.5rem;
     }
 }
 
@@ -536,5 +522,9 @@ span {
 
     .heading {
         font-size: 3rem;
+    }
+
+    .home-img img {
+        width: 90vw;
     }
 }
