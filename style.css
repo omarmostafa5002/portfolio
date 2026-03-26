@@ -486,3 +486,55 @@ span {
 .Certificate-img:hover img {
     filter: brightness(1.08);
 }
+
+@media (max-width: 995px) {
+    html {
+        font-size: 55%;
+    }
+
+    .home-content h1 {
+        font-size: 4rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .heading {
+        font-size: 3.5rem;
+    }
+
+    .certificate h2 {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .cert-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 0 1rem;
+        max-width: 100%;
+    }
+
+    .project-box {
+        width: 100%;
+    }
+
+    .typing-text {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 50%;
+    }
+
+    .home-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+}
